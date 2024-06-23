@@ -1,5 +1,3 @@
-// Filename: script.js 
-// Get the game grid 
 const gridItems = [ 
 	...document.querySelectorAll(".grid-item"), 
 ]; 
@@ -29,7 +27,7 @@ let colors = [
 	"#000000", 
 ]; 
 
-// Create the starting game grid. 
+
 let row = []; 
 for (let index = 1; index < gridItems.length + 1; index++) { 
 	if (index % 4 === 0) { 
@@ -45,7 +43,7 @@ for (let index = 1; index < gridItems.length + 1; index++) {
 	} 
 } 
 
-// Assign any two grid blocks the value of 2 
+
 const rowIdx = Math.floor(Math.random() * 4); 
 const colIdx = Math.floor(Math.random() * 4); 
 let rowIdx2 = Math.floor(Math.random() * 4); 
@@ -62,11 +60,10 @@ matrix[rowIdx2][colIdx2].firstElementChild.textContent = 2;
 let availIndexes = updateAvailIndexes(); 
 
 updateColors(); 
-
-// Make web page able to listen to keydown event 
+ 
 document.addEventListener("keydown", moveBlocks); 
 
-// Method to extract columns from an 2D array. 
+
 const arrayColumn = (arr, n) => arr.map((x) => x[n]); 
 
 function moveBlocks(e) { 
