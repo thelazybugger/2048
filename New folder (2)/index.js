@@ -1,5 +1,5 @@
 const gridItems = [ 
-	document.querySelectorAll(".grid-item"), 
+	...document.querySelectorAll(".grid-item"), 
 ]; 
 const score_val = document.querySelector(".score-value"); 
 const result = document.querySelector(".result"); 
